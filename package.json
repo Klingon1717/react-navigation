@@ -23,6 +23,7 @@
     "watchify": "^3.3.1"
   },
   "dependencies": {
+    "back": "^1.0.1",
     "backbone": "^1.2.3",
     "jquery": "^2.1.4",
     "materialize-css": "^0.97.1",
