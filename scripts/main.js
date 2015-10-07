@@ -1,4 +1,6 @@
 'use strict';
+
+
 var React = require('react');
 var Backbone = require('backbone');
 window.$ = require('jquery');
@@ -10,6 +12,10 @@ var DashboardComponent = require('./components/DashboardComponent');
 var LoginComponent = require('./components/LoginComponent');
 var RegisterComponent = require('./components/RegisterComponent');
 
+Parse.initialize("NIXnILrrsu8JdvUWbFAsMuM48vsb1Qh3iCPyeahc", "jl3vfE6GQ3vJTonhw6UnQHh5G3Y48rnXSAULetGA");
+
+
+
 var app = document.getElementById('app');
 
 var Router = Backbone.Router.extend({
@@ -20,10 +26,12 @@ var Router = Backbone.Router.extend({
 		'register': 'register'
 	},
 	home: function() {
-		React.render(<HomeComponent />, app);
+		React.render(<HomeComponent router={r} />, app);
 	},
 	dashboard: function() {
-		React.render(<DashboardComponent />, app);
+		React.render(<DashboardComponent router ={r} />,app);
+
+			
 	},
 	login: function() {
 		React.render(<LoginComponent router={r} />, app);
